@@ -54,6 +54,10 @@ body {
       border-radius: 20px;
       padding: 1.2em;
 
+      h2 {
+        line-height: 0.2;
+      }
+
       #section-calculation {
         color: $dark-grayish-cyan;
         margin-right: 1em;
@@ -216,6 +220,10 @@ body {
     main {
       #section-bottom {
         @include flexProperty(center, flex-start, column);
+
+        h2 {
+          line-height: 1.5;
+        }
   
         #section-calculation, #section-result {
           width: 100%;

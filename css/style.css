@@ -76,6 +76,10 @@ body main #section-bottom {
   padding: 1.2em;
 }
 
+body main #section-bottom h2 {
+  line-height: 0.2;
+}
+
 body main #section-bottom #section-calculation {
   color: #5e7a7d;
   margin-right: 1em;
@@ -317,6 +321,9 @@ body main #section-bottom #section-result #reset:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  body main #section-bottom h2 {
+    line-height: 1.5;
   }
   body main #section-bottom #section-calculation, body main #section-bottom #section-result {
     width: 100%;
