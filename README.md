@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Alifkm/tip-calculator-app-main.git)
-- Live Site URL: [Add live site URL here](https://darling-nougat-b807ba.netlify.app/)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/tip-calculator-app-main-using-html-scss-and-vanilla-javascript-KXCwblJj24)
+- Live Site URL: [Live Site Using Netlify](https://darling-nougat-b807ba.netlify.app/)
 
 ## My process
 
