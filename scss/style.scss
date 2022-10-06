@@ -12,7 +12,8 @@ body {
   margin: 0;
   background-color: $light-grayish-cyan;
   background-image: linear-gradient(20deg, $light-grayish-cyan, darken($light-grayish-cyan, 10%));
-
+  height: 100vh;
+  
   main {
     width: Min(95%, 1000px);
 
@@ -207,34 +208,40 @@ body {
         }
       }
     }
+  }
 
-    @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1000px) {
+    height: auto;
+
+    main {
       #section-bottom {
         @include flexProperty(center, flex-start, column);
   
         #section-calculation, #section-result {
           width: 100%;
         }
-
+  
         #section-calculation {
           margin-right: 0;
           margin-bottom: 1em;
         }
-
+  
         #section-result {
           margin-left: 0;
         }
       }
     }
-  
-    @media only screen and (max-width: 500px) {
+  }
+
+  @media only screen and (max-width: 500px) {
+    main {
       #section-bottom {
         padding: 0.5em;
-
+  
         label, button {
           font-size: 0.75rem !important;
         }
-
+  
         #section-calculation {
           .input-div {
             .button-div {
@@ -246,20 +253,20 @@ body {
             }
           }
         }
-
+  
         #section-result {
           padding: 0 1em;
-
+  
           p {
             font-size: 0.6rem !important;
           }
-
+  
           h2 {
             font-size: 1.25rem !important;
           }
         }
       }
-
+  
       ::placeholder {
         font-size: 0.75rem !important;
       }
