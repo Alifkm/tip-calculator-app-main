@@ -10,37 +10,61 @@
 
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <main>
+    <section id="section-top">
+      <h1>SPLI<br>TTER</h1>
+    </section>
+    <section id="section-bottom">
+      <section id="section-calculation">
+        <div class="input-div">
+          <div class="label-and-error-wrapper">
+            <label>Bill</label>
+            <p class="error-msg error-msg-active">Can't be zero</p>
+          </div>
+          <input type="number" id="bill" placeholder="0">
+        </div>
 
-  Bill
+        <div class="input-div">
+          <label class="tip">Select Tip %</label>
+          <div class="button-div">
+            <button class="button-tip">5%</button>
+            <button class="button-tip">10%</button>
+            <button class="button-tip">15%</button>
+            <button class="button-tip">25%</button>
+            <button class="button-tip">50%</button>
+            <input id="custom-input" type="number" placeholder="Custom">
+          </div>
+        </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
+        <div class="input-div">
+          <div class="label-and-error-wrapper">
+            <label>Number of People</label>
+            <p class="error-msg error-msg-active">Can't be zero</p>
+          </div>
+          <input type="number" id="people" placeholder="0">
+        </div>
+      </section>
+      <section id="section-result">
+        <div class="result">
+          <p>Tip Amount <br>
+            <span>/ person</span></p>
+          <h2 id="tip-amount">$0.00</h2>
+        </div>
+        <div class="result">
+          <p>Total <br>
+            <span>/ person</span></p>
+          <h2 id="total">$0.00</h2>
+        </div>
+        <button id="reset">Reset</button>
+      </section>
+    </section>
+  </main>
   
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/Alifkm">Alif Kahfi</a>.
   </footer>
 
   <script src="js/script.js"></script>

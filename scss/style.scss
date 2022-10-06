@@ -1,0 +1,295 @@
+@import "config";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: $font-stack;
+  font-size: 24px;
+}
+
+body {
+  @include flexProperty(center, center, column);
+  padding: 2em 0;
+  margin: 0;
+  background-color: $light-grayish-cyan;
+  background-image: linear-gradient(20deg, $light-grayish-cyan, darken($light-grayish-cyan, 10%));
+
+  main {
+    width: Min(95%, 1000px);
+
+    input {
+      border: 2px solid $very-light-grayish-cyan !important;
+      text-align: right;
+    }
+
+    input[type=number] {
+      -webkit-appearance: none;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+
+    input:focus {
+      outline: none;
+      border: 2px solid $strong-cyan !important;
+    }
+
+    #section-top {
+      margin-bottom: 3em;
+
+      h1 {
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing: 0.5em;
+        color: $very-dark-cyan;
+      }
+    }
+
+    #section-bottom {
+      @include flexProperty(center, center, null);
+      background-color: $white;
+      border-radius: 20px;
+      padding: 1.2em;
+
+      #section-calculation {
+        color: $dark-grayish-cyan;
+        margin-right: 1em;
+        padding: 0.5em;
+        width: 50%;
+
+        .input-div {
+          @include flexProperty(center, left, column);
+
+          .label-and-error-wrapper {
+            @include flexProperty(space-between, flex-end, row);
+            
+            .error-msg {
+              display: none;
+            }
+          }
+
+          #bill {
+            background-image: url('/images/icon-dollar.svg');
+            background-position: 1em;
+            background-repeat: no-repeat;
+          }
+
+          #people {
+            background-image: url('/images/icon-person.svg');
+            background-position: 1em;
+            background-repeat: no-repeat;  
+          }
+
+          label {
+            margin-bottom: 0.5em
+          }
+
+          .button-div {
+            @include flexProperty(space-between, center, null);
+            flex-wrap: wrap;
+            gap: 0.6em;
+
+            input {
+              line-height: 0;
+              height: 2.1rem;
+              width: 30%;
+              border-radius: 5px;
+              padding: 0.5em;
+              text-align: right !important;
+            }
+
+            #custom-input {
+              text-align: left;
+            }
+
+            input::placeholder {
+              text-align: center;
+            }
+  
+            button {
+              padding: 0.3em 1.5em;
+              border-radius: 5px;
+              border: none;
+              background-color: $very-dark-cyan;
+              color: $white;
+              font-weight: 700;
+              font-family: $font-stack;
+              width: 30%;
+            }
+
+            button:hover, button:focus {
+              background-color: lighten($strong-cyan, 30%);
+              color: $very-dark-cyan;
+              cursor: pointer;
+            }
+          }
+
+          .button-div:nth-child(2) {
+            margin-bottom: 0.6em;
+          }
+
+          input {
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            border: none;
+            background-color: $very-light-grayish-cyan;
+            color: $very-dark-cyan;
+          }
+        }
+
+        .input-div:nth-child(1) {
+          margin-bottom: 1em;
+        }
+
+        .input-div:nth-child(3) {
+          margin-top: 1em;
+        }
+      }
+    
+      #section-result {
+        @include flexProperty(center, center, column);
+        padding: 1em 2em;
+        background-color: $very-dark-cyan;
+        border-radius: 10px;
+        width: 50%;
+        margin-left: 1em;
+
+        .result {
+          @include flexProperty(space-between, center, row);
+          width: 100%;
+
+          #tip-amount, #total {
+            overflow: hidden;
+          }
+
+          p {
+            font-size: 0.8rem;
+            color: $white;
+            line-height: 1.2em;
+
+            span {
+              color: $dark-grayish-cyan;
+              font-size: 0.6rem;
+            }
+          }
+
+          h2 {
+            text-align: right;
+            font-size: 2rem;
+            color: $strong-cyan;
+            line-height: 1em;
+          }
+        }
+
+        .result:nth-child(2) {
+          margin-bottom: 4em;
+          margin-top: -1em !important;
+        }
+
+        button {
+          text-transform: uppercase;
+          width: 100%;
+          padding: 0.5em 1.5em;
+          border: none;
+          border-radius: 5px;
+          background-color: $strong-cyan;
+          color: $very-dark-cyan;
+          font-weight: 700;
+          margin-bottom: 1em;
+        }
+
+        #reset:hover {
+          background-color: lighten($strong-cyan, 30%);
+          color: $very-dark-cyan;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1000px) {
+      #section-bottom {
+        @include flexProperty(center, flex-start, column);
+  
+        #section-calculation, #section-result {
+          width: 100%;
+        }
+
+        #section-calculation {
+          margin-right: 0;
+          margin-bottom: 1em;
+        }
+
+        #section-result {
+          margin-left: 0;
+        }
+      }
+    }
+  
+    @media only screen and (max-width: 500px) {
+      #section-bottom {
+        padding: 0.5em;
+
+        label, button {
+          font-size: 0.75rem !important;
+        }
+
+        #section-calculation {
+          .input-div {
+            .button-div {
+              justify-content: space-evenly;
+              button, input {
+                margin-inline: 0;
+                width: 45%;
+              }
+            }
+          }
+        }
+
+        #section-result {
+          padding: 0 1em;
+
+          p {
+            font-size: 0.6rem !important;
+          }
+
+          h2 {
+            font-size: 1.25rem !important;
+          }
+        }
+      }
+
+      ::placeholder {
+        font-size: 0.75rem !important;
+      }
+      
+    }
+  }
+
+  footer, footer a {
+    font-size: 0.5rem;
+    margin-top: 2em;
+    text-align: center;
+  }
+}
+
+::placeholder {
+  text-align: right;
+  color: lighten($dark-grayish-cyan, 30%);
+}
+
+.active {
+  background-color: lighten($strong-cyan, 30%) !important;
+  color: $very-dark-cyan !important;
+}
+
+.error-msg-active {
+  font-size: 0.6rem;
+  color: lighten(red, 20%);
+}
+
+.input-error {
+  outline: auto lighten(red, 20%) !important;
+  border: 2px solid lighten(red, 20%) !important;
+}

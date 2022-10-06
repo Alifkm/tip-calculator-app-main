@@ -1,1 +1,407 @@
-/* No CSS */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em 0;
+  margin: 0;
+  background-color: #c5e4e7;
+  background-image: linear-gradient(20deg, #c5e4e7, #a2d3d8);
+}
+
+body main {
+  width: Min(95%, 1000px);
+}
+
+body main input {
+  border: 2px solid #f4fafa !important;
+  text-align: right;
+}
+
+body main input[type=number] {
+  -webkit-appearance: none;
+}
+
+body main input::-webkit-outer-spin-button,
+body main input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body main input:focus {
+  outline: none;
+  border: 2px solid #26c0ab !important;
+}
+
+body main #section-top {
+  margin-bottom: 3em;
+}
+
+body main #section-top h1 {
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5em;
+  color: #00494d;
+}
+
+body main #section-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 1.2em;
+}
+
+body main #section-bottom #section-calculation {
+  color: #5e7a7d;
+  margin-right: 1em;
+  padding: 0.5em;
+  width: 50%;
+}
+
+body main #section-bottom #section-calculation .input-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main #section-bottom #section-calculation .input-div .label-and-error-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main #section-bottom #section-calculation .input-div .label-and-error-wrapper .error-msg {
+  display: none;
+}
+
+body main #section-bottom #section-calculation .input-div #bill {
+  background-image: url("/images/icon-dollar.svg");
+  background-position: 1em;
+  background-repeat: no-repeat;
+}
+
+body main #section-bottom #section-calculation .input-div #people {
+  background-image: url("/images/icon-person.svg");
+  background-position: 1em;
+  background-repeat: no-repeat;
+}
+
+body main #section-bottom #section-calculation .input-div label {
+  margin-bottom: 0.5em;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.6em;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div input {
+  line-height: 0;
+  height: 2.1rem;
+  width: 30%;
+  border-radius: 5px;
+  padding: 0.5em;
+  text-align: right !important;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div #custom-input {
+  text-align: left;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div input::-webkit-input-placeholder {
+  text-align: center;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div input:-ms-input-placeholder {
+  text-align: center;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div input::-ms-input-placeholder {
+  text-align: center;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div input::placeholder {
+  text-align: center;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div button {
+  padding: 0.3em 1.5em;
+  border-radius: 5px;
+  border: none;
+  background-color: #00494d;
+  color: white;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  width: 30%;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div button:hover, body main #section-bottom #section-calculation .input-div .button-div button:focus {
+  background-color: #95eadf;
+  color: #00494d;
+  cursor: pointer;
+}
+
+body main #section-bottom #section-calculation .input-div .button-div:nth-child(2) {
+  margin-bottom: 0.6em;
+}
+
+body main #section-bottom #section-calculation .input-div input {
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  border: none;
+  background-color: #f4fafa;
+  color: #00494d;
+}
+
+body main #section-bottom #section-calculation .input-div:nth-child(1) {
+  margin-bottom: 1em;
+}
+
+body main #section-bottom #section-calculation .input-div:nth-child(3) {
+  margin-top: 1em;
+}
+
+body main #section-bottom #section-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 2em;
+  background-color: #00494d;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: 1em;
+}
+
+body main #section-bottom #section-result .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+body main #section-bottom #section-result .result #tip-amount, body main #section-bottom #section-result .result #total {
+  overflow: hidden;
+}
+
+body main #section-bottom #section-result .result p {
+  font-size: 0.8rem;
+  color: white;
+  line-height: 1.2em;
+}
+
+body main #section-bottom #section-result .result p span {
+  color: #5e7a7d;
+  font-size: 0.6rem;
+}
+
+body main #section-bottom #section-result .result h2 {
+  text-align: right;
+  font-size: 2rem;
+  color: #26c0ab;
+  line-height: 1em;
+}
+
+body main #section-bottom #section-result .result:nth-child(2) {
+  margin-bottom: 4em;
+  margin-top: -1em !important;
+}
+
+body main #section-bottom #section-result button {
+  text-transform: uppercase;
+  width: 100%;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  color: #00494d;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+body main #section-bottom #section-result #reset:hover {
+  background-color: #95eadf;
+  color: #00494d;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+  body main #section-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body main #section-bottom #section-calculation, body main #section-bottom #section-result {
+    width: 100%;
+  }
+  body main #section-bottom #section-calculation {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+  body main #section-bottom #section-result {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body main #section-bottom {
+    padding: 0.5em;
+  }
+  body main #section-bottom label, body main #section-bottom button {
+    font-size: 0.75rem !important;
+  }
+  body main #section-bottom #section-calculation .input-div .button-div {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body main #section-bottom #section-calculation .input-div .button-div button, body main #section-bottom #section-calculation .input-div .button-div input {
+    margin-inline: 0;
+    width: 45%;
+  }
+  body main #section-bottom #section-result {
+    padding: 0 1em;
+  }
+  body main #section-bottom #section-result p {
+    font-size: 0.6rem !important;
+  }
+  body main #section-bottom #section-result h2 {
+    font-size: 1.25rem !important;
+  }
+  body main ::-webkit-input-placeholder {
+    font-size: 0.75rem !important;
+  }
+  body main :-ms-input-placeholder {
+    font-size: 0.75rem !important;
+  }
+  body main ::-ms-input-placeholder {
+    font-size: 0.75rem !important;
+  }
+  body main ::placeholder {
+    font-size: 0.75rem !important;
+  }
+}
+
+body footer, body footer a {
+  font-size: 0.5rem;
+  margin-top: 2em;
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: right;
+  color: #b1c2c4;
+}
+
+:-ms-input-placeholder {
+  text-align: right;
+  color: #b1c2c4;
+}
+
+::-ms-input-placeholder {
+  text-align: right;
+  color: #b1c2c4;
+}
+
+::placeholder {
+  text-align: right;
+  color: #b1c2c4;
+}
+
+.active {
+  background-color: #95eadf !important;
+  color: #00494d !important;
+}
+
+.error-msg-active {
+  font-size: 0.6rem;
+  color: #ff6666;
+}
+
+.input-error {
+  outline: auto #ff6666 !important;
+  border: 2px solid #ff6666 !important;
+}
